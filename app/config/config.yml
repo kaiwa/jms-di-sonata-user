@@ -64,3 +64,15 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+fos_user:
+    db_driver: orm
+    user_class: \StdClass
+    firewall_name: main
+    group:
+        group_class: \StdClass
+        group_manager: sonata.user.orm.group_manager
+
+jms_di_extra:
+    locations:
+        all_bundles: false
